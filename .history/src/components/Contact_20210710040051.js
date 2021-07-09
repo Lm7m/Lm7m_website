@@ -48,7 +48,7 @@ class ContactPage extends React.Component {
     return (
       <div className="contact" id="contact">
         <h1>Contact us</h1>
-        <h2 className="text-center w-responsive mx-auto pb-5"> Let us know how can we help </h2>
+        <p className="text-center w-responsive mx-auto pb-5"> Let us know how can we help </p>
         <div className="all">
           <form
             id="contact-form"
