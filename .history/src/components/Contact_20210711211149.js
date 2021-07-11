@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
 class ContactPage extends React.Component {
@@ -11,19 +11,17 @@ class ContactPage extends React.Component {
       message: "",
     };
     this.state = {
-      isButtonDisabled: false,
-    };
+      isButtonDisabled: false
+    }
   }
 
   handleSubmit = (e) => {
+    console.log("here we go we have submited borrow");
     e.preventDefault(); // Prevents default refresh by the browser
-    this.setState({
-      isButtonDisabled: true,
-    });
 
     emailjs
       .send(
-        `service_55x3bj6`,
+        `service_msfjnfj`,
         `template_wx1nmko`,
         {
           name: this.state.name,
@@ -36,17 +34,15 @@ class ContactPage extends React.Component {
       )
       .then(
         () => {
-          this.setState(
-            {
-              isButtonDisabled: false,
-            },
-            { name: "", email: "", subject: "", message: "" ,}
-          );
           alert("Message Sent, We will get back to you shortly ");
+          this.setState({
+            isButtonDisabled: true
+          });
+          this.resetForm;
         },
         (error) => {
           this.setState({
-            isButtonDisabled: false,
+            isButtonDisabled: true
           });
           alert("An error occurred, Please try again" + error.text);
           console.log(error);
@@ -59,6 +55,8 @@ class ContactPage extends React.Component {
   }
 
   render() {
+
+
     return (
       <div className="contact" id="contact">
         <h1>Contact me</h1>
@@ -126,6 +124,7 @@ class ContactPage extends React.Component {
             </div>
             <button
               disabled={this.state.isButtonDisabled}
+onClick={() => this.uploadFile()}
               type="submit"
               className="btn btn-primary"
             >

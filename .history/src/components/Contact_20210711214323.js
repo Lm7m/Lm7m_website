@@ -40,7 +40,7 @@ class ContactPage extends React.Component {
             {
               isButtonDisabled: false,
             },
-            { name: "", email: "", subject: "", message: "" ,}
+            { name: "", email: "", subject: "", message: "" }
           );
           alert("Message Sent, We will get back to you shortly ");
         },

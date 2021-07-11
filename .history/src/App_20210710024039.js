@@ -9,10 +9,14 @@ import ContactPage from "./components/Contact.js";
 import Knowledge from "./components/knowledge.js";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
+import { Helmet } from "react-helmet";
 
 function App() {
   return (
     <>
+      <Helmet>
+        <title>Lm7m's Portofolio</title>
+      </Helmet>
       <NavBar />
       <Header />
       <About />

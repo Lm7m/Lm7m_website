@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
 class ContactPage extends React.Component {
@@ -16,14 +16,12 @@ class ContactPage extends React.Component {
   }
 
   handleSubmit = (e) => {
+    console.log("here we go we have submited borrow");
     e.preventDefault(); // Prevents default refresh by the browser
-    this.setState({
-      isButtonDisabled: true,
-    });
 
     emailjs
       .send(
-        `service_55x3bj6`,
+        `service_msfjnfj`,
         `template_wx1nmko`,
         {
           name: this.state.name,
@@ -36,13 +34,10 @@ class ContactPage extends React.Component {
       )
       .then(
         () => {
-          this.setState(
-            {
-              isButtonDisabled: false,
-            },
-            { name: "", email: "", subject: "", message: "" ,}
-          );
           alert("Message Sent, We will get back to you shortly ");
+          {
+            this.resetForm,
+          }
         },
         (error) => {
           this.setState({
@@ -126,6 +121,11 @@ class ContactPage extends React.Component {
             </div>
             <button
               disabled={this.state.isButtonDisabled}
+              onClick={() =>
+                this.setState({
+                  isButtonDisabled: true,
+                })
+              }
               type="submit"
               className="btn btn-primary"
             >

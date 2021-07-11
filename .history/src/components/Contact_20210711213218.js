@@ -36,13 +36,12 @@ class ContactPage extends React.Component {
       )
       .then(
         () => {
-          this.setState(
-            {
-              isButtonDisabled: false,
-            },
-            { name: "", email: "", subject: "", message: "" ,}
-          );
+          this.setState({
+            isButtonDisabled: false,
+            name: "", email: "", subject: "", message: ""
+          });
           alert("Message Sent, We will get back to you shortly ");
+          this.resetForm();
         },
         (error) => {
           this.setState({

@@ -9,10 +9,12 @@ import ContactPage from "./components/Contact.js";
 import Knowledge from "./components/knowledge.js";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
+import { Helmet } from "react-helmet";
 
 function App() {
   return (
     <>
+      
       <NavBar />
       <Header />
       <About />

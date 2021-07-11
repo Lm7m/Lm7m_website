@@ -20,10 +20,9 @@ class ContactPage extends React.Component {
     this.setState({
       isButtonDisabled: true,
     });
-
     emailjs
       .send(
-        `service_55x3bj6`,
+        `service_msfjnfj`,
         `template_wx1nmko`,
         {
           name: this.state.name,
@@ -36,12 +35,10 @@ class ContactPage extends React.Component {
       )
       .then(
         () => {
-          this.setState(
-            {
-              isButtonDisabled: false,
-            },
-            { name: "", email: "", subject: "", message: "" ,}
-          );
+          this.setState({
+            isButtonDisabled: false,
+          });
+          this.resetForm();
           alert("Message Sent, We will get back to you shortly ");
         },
         (error) => {
