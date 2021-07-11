@@ -352,7 +352,7 @@ col {
   background: rgb(153, 152, 152);
   background: var(--primary-white);
   color: --primary-black;
-  opacity:0.7;
+  opacity: 70%;
   font-weight: bold;
   cursor: pointer;
   transition: 0.4s ease;
@@ -361,7 +361,7 @@ col {
 .card > .card-info > .card-button:hover {
   background: var(--primary-yellow);
   color: --primary-black;
-  opacity: 1;
+  opacity: 100%;
 }
 
 .project-details {
