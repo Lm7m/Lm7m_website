@@ -399,6 +399,7 @@ col {
   font-weight: bolder;
   margin-left: 1vw;
   color: --primary-black;
+  opacity: 90%;
 }
 
 .contact > .all {

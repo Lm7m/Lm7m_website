@@ -1,4 +1,5 @@
 import React from "react";
+
 import emailjs from "emailjs-com";
 
 class ContactPage extends React.Component {
@@ -24,7 +25,7 @@ class ContactPage extends React.Component {
           email: this.state.email,
           subject: this.state.subject,
           message: this.state.message,
-          reply_to: this.state.email,
+          reply_to:this.state.email
         },
         "user_KwzIcpHEADqqGdUaNzQGE"
       )
@@ -47,11 +48,7 @@ class ContactPage extends React.Component {
     return (
       <div className="contact" id="contact">
         <h1>Contact us</h1>
-
-        <h2 className="text-center w-responsive mx-auto pb-5">
-          {" "}
-          Let us know how can we help{" "}
-        </h2>
+        <h2 className="text-center w-responsive mx-auto pb-5"> Let us know how can we help </h2>
         <div className="all">
           <form
             id="contact-form"
