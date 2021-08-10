@@ -1,5 +1,7 @@
 import React from "react";
 
+
+
 const About = () => {
   return (
     <div className="about-image" id="about">
@@ -9,8 +11,8 @@ const About = () => {
           Designing, Programming, Implementation and Testing Skills, familiar
           with learning new skills
         </p>
-        <p>MyPDF</p>
       </div>
+      
     </div>
   );
 };

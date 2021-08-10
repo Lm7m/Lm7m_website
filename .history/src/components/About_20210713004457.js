@@ -9,7 +9,12 @@ const About = () => {
           Designing, Programming, Implementation and Testing Skills, familiar
           with learning new skills
         </p>
-        <p>MyPDF</p>
+        <p>
+          <a
+          >
+            MyPDF
+          </a>
+        </p>
       </div>
     </div>
   );
